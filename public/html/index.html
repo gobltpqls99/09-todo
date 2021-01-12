@@ -21,33 +21,31 @@
 <body>
 	<header class="header-wrapper">
 		<h1 class="title-wrap">
-			<i class="fa fa-plus"></i>
-			TODO APP.
+			<i class="fa fa-tasks"></i> TODO App
 		</h1>
 		<div class="sign-wrap">
 			<div class="icon">
-				<img src="http://via.placeholder.com/36" alt="아이콘" class="mw-100">
+				<img src="https://via.placeholder.com/36" alt="아이콘" class="mw-100">
 			</div>
 			<div class="email"></div>
 			<button class="btn btn-danger" id="btLogout">
 				<i class="fa fa-sign-out-alt"></i>
 			</button>
-		</div><!-- sign-wrap -->
+		</div>
 	</header>
 
 	<div class="content-wrapper">
 		<div class="list-wrapper">
-			<div class="add-wrap">
-				<i class="fa fa-plus"></i>
-				<input type="test" id="task" class="form-control" autofocus>
+			<form class="add-wrap" onsubmit="return onSubmit(this);">
+				<button type="submit"><i class="fa fa-plus"></i></button>
+				<input type="text" name="task" class="form-control" autofocus>
+			</form>
+			<div class="text-right">
+				<a href="javascript: onDoneClick()" class="bt-done active">완료된 항목 </a>
 			</div>
-			<div class="list-wrap">
-				<li>
-					<i class="active far fa-circle"></i>
-					<i class="far fa-check-circle"></i>
-					<span>우유/고기 사기</span>
-				</li>
-			</div>
+			<ul class="list-wrap">
+				
+			</ul>
 		</div>
 		<div class="edit-wrapper">
 			<textarea id="content" class="form-control">
@@ -60,6 +58,6 @@
 		<button class="btn btn-danger" id="btGoogleLogin">
 			<i class="fab fa-google mr-2"></i> Google 로그인
 		</button>
-	</div><!-- auth-wrapper moodal-wrapper -->
+	</div>
 </body>
 </html>
